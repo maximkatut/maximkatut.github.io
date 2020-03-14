@@ -7,6 +7,5 @@
 *.psd
 node_modules/
 app/
-dist/
 npm-debug.*
 Thumbs.db

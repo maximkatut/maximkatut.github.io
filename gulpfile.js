@@ -1,6 +1,12 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const browserSync = require("browser-sync");
+const postcss = require("gulp-postcss");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
+const autoprefixer = require("autoprefixer");
+const minify = require("gulp-csso");
+const rename = require("gulp-rename");
 const babel = require("gulp-babel");
 const concat = require("gulp-concat");
 const del = require("del");
@@ -10,60 +16,83 @@ const server = browserSync.create();
 const paths = {
   scripts: {
     src: "app/js/*.js",
-    dest: "dist/js/"
+    dest: "build/js/"
   },
   styles: {
     src: "./app/scss/**/*.scss",
-    dest: "./app/css/"
+    dest: "./build/css/"
   },
   html: {
-    src: "./app/*.html"
-  },
-  build: {
-    scripts: {
-      src: "app/js/*.js",
-      dest: "dist/js"
-    }
+    src: "./app/*.html",
+    dest: "./build/"
   }
 };
-
-const clean = () => del(["dist"]);
 
 function reload() {
   server.reload();
 }
 
+const clean = () => del(["build"]);
+
 function style() {
   return gulp
     .src(paths.styles.src)
-    .pipe(sass())
+    .pipe(sass().on("error", sass.logError))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(server.stream());
 }
 
-function start() {
-  server.init({
-    server: {
-      baseDir: "app"
-    }
-  });
-  gulp.watch(paths.styles.src, style);
-  gulp.watch(paths.html.src).on("change", reload);
-  gulp.watch(paths.scripts.src).on("change", reload);
+function html() {
+  return gulp
+    .src("app/*.html")
+    .pipe(posthtml([include()]))
+    .pipe(gulp.dest("build"));
 }
 
 function scripts() {
   return gulp
     .src(paths.scripts.src, { sourcemaps: true })
+    .pipe(gulp.dest(paths.scripts.dest))
     .pipe(babel())
     .pipe(uglify())
     .pipe(concat("index.min.js"))
     .pipe(gulp.dest(paths.scripts.dest));
 }
 
-function build() {}
+function copy() {
+  return gulp.src([
+    "app/fonts/**/*.{woff,woff2}",
+    "app/images/**"
+  ], {
+    base: "app"
+  })
+  .pipe(gulp.dest("build"));
+}
 
-exports.style = style;
-exports.scripts = scripts;
+function build(done) {
+  clean();
+  style();
+  html();
+  scripts();
+  copy();
+  done();
+}
+
+function start() {
+  server.init({
+    server: {
+      baseDir: "build/"
+    }
+  });
+  gulp.watch(paths.styles.src, style);
+  gulp.watch(paths.html.src, html).on("change", reload);
+  gulp.watch(paths.scripts.src, scripts).on("change", reload);
+}
+
 exports.start = start;
 exports.clean = clean;
+exports.build = build;
