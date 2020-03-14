@@ -64,17 +64,14 @@ function scripts() {
 }
 
 function copy() {
-  return gulp.src([
-    "app/fonts/**/*.{woff,woff2}",
-    "app/images/**"
-  ], {
-    base: "app"
-  })
-  .pipe(gulp.dest("build"));
+  return gulp
+    .src(["app/fonts/**/*.{woff,woff2}", "app/images/**"], {
+      base: "app"
+    })
+    .pipe(gulp.dest("build/"));
 }
 
 function build(done) {
-  clean();
   style();
   html();
   scripts();
@@ -85,7 +82,7 @@ function build(done) {
 function start() {
   server.init({
     server: {
-      baseDir: "build/"
+      baseDir: "./build/"
     }
   });
   gulp.watch(paths.styles.src, style);
@@ -93,6 +90,11 @@ function start() {
   gulp.watch(paths.scripts.src, scripts).on("change", reload);
 }
 
+function putOnProduction() {
+  return gulp.src("build/**").pipe(gulp.dest("./"));
+}
+
 exports.start = start;
 exports.clean = clean;
 exports.build = build;
+exports.putOnProduction = putOnProduction;
