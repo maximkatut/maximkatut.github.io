@@ -1,5 +1,3 @@
-"use strict";
-
 const orbitsCircles = document.querySelectorAll(".inner");
 const bodyWrapper = document.querySelector(".body-wrapper");
 const burger = document.querySelector(".navbar__burger");

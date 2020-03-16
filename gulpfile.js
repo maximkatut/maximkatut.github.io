@@ -67,9 +67,17 @@ function scripts() {
 
 function copy() {
   return gulp
-    .src(["app/fonts/**/*.{woff,woff2}", "app/images/**", "app/js/*.json"], {
-      base: "app"
-    })
+    .src(
+      [
+        "app/fonts/**/*.{woff,woff2}",
+        "app/images/**",
+        "app/js/*.json",
+        "app/js/particles.min.js"
+      ],
+      {
+        base: "app"
+      }
+    )
     .pipe(gulp.dest("build/"));
 }
 
@@ -99,5 +107,4 @@ function publish() {
 exports.start = start;
 exports.clean = clean;
 exports.build = build;
-exports.scripts = scripts;
 exports.publish = publish;
