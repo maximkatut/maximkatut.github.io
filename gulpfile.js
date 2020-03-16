@@ -92,7 +92,7 @@ function start() {
   gulp.watch(paths.scripts.src, scripts).on("change", reload);
 }
 
-function putOnProduction() {
+function publish() {
   return gulp.src("build/**").pipe(gulp.dest("./"));
 }
 
@@ -100,4 +100,4 @@ exports.start = start;
 exports.clean = clean;
 exports.build = build;
 exports.scripts = scripts;
-exports.putOnProduction = putOnProduction;
+exports.publish = publish;
