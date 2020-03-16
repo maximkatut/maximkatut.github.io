@@ -12,35 +12,24 @@
   font-style: normal;
   font-display: swap; }
 
-html {
-  box-sizing: border-box; }
-
 *,
-*::before,
-*::after {
-  box-sizing: inherit; }
+:after,
+:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 body {
   font-family: "Quicksand", "Trebuchet MS", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(247, 135, 135, 0.5)), url(../images/code.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   overflow-x: hidden; }
 
-img {
-  max-width: 100%;
-  height: auto; }
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden; }
+a {
+  color: white;
+  text-decoration: none; }
 
 #particles-js {
   position: absolute;
@@ -190,24 +179,25 @@ img {
   display: flex;
   justify-content: space-between;
   list-style: none; }
-  .navbar__list .navbar__item {
-    width: 56px;
-    height: 40px;
-    padding: 0 10px; }
-    .navbar__list .navbar__item a:hover .navbar__svg {
-      fill: #d2cdcd;
-      -webkit-animation-name: shake;
-              animation-name: shake;
-      -webkit-animation-duration: 1s;
-              animation-duration: 1s;
-      -webkit-animation-iteration-count: infinite;
-              animation-iteration-count: infinite; }
-      @media screen and (max-width: 600px) {
-        .navbar__list .navbar__item a:hover .navbar__svg {
-          -webkit-animation: none;
-                  animation: none; } }
-    .navbar__list .navbar__item .navbar__svg {
-      fill: white; }
+
+.navbar__item {
+  width: 56px;
+  height: 40px;
+  padding: 0 10px; }
+  .navbar__item a:hover .navbar__svg {
+    fill: #d2cdcd;
+    -webkit-animation-name: shake;
+            animation-name: shake;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+    @media screen and (max-width: 600px) {
+      .navbar__item a:hover .navbar__svg {
+        -webkit-animation: none;
+                animation: none; } }
+  .navbar__item .navbar__svg {
+    fill: white; }
 
 .home {
   display: flex;
@@ -223,7 +213,7 @@ img {
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  background-image: url(../img/code.svg);
+  background-image: url(../images/code.svg);
   background-size: contain;
   background-repeat: no-repeat; }
 

@@ -1,17 +1,18 @@
-const gulp = require("gulp");
-const sass = require("gulp-sass");
-const browserSync = require("browser-sync");
-const postcss = require("gulp-postcss");
-const posthtml = require("gulp-posthtml");
-const include = require("posthtml-include");
-const autoprefixer = require("autoprefixer");
-const minify = require("gulp-csso");
-const rename = require("gulp-rename");
-const babel = require("gulp-babel");
-const concat = require("gulp-concat");
-const del = require("del");
-const uglify = require("gulp-uglify");
-const server = browserSync.create();
+const gulp = require("gulp"),
+  sass = require("gulp-sass"),
+  browserSync = require("browser-sync"),
+  postcss = require("gulp-postcss"),
+  posthtml = require("gulp-posthtml"),
+  include = require("posthtml-include"),
+  autoprefixer = require("autoprefixer"),
+  minify = require("gulp-csso"),
+  rename = require("gulp-rename"),
+  babel = require("gulp-babel"),
+  concat = require("gulp-concat"),
+  del = require("del"),
+  uglify = require("gulp-uglify"),
+  server = browserSync.create(),
+  terser = require("gulp-terser");
 
 const paths = {
   scripts: {
@@ -55,17 +56,18 @@ function html() {
 
 function scripts() {
   return gulp
-    .src(paths.scripts.src, { sourcemaps: true })
+    .src("app/js/index.js", { sourcemaps: true })
     .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(concat("concat.js"))
     .pipe(babel())
-    .pipe(uglify())
-    .pipe(concat("index.min.js"))
+    .pipe(terser())
+    .pipe(rename("index.min.js"))
     .pipe(gulp.dest(paths.scripts.dest));
 }
 
 function copy() {
   return gulp
-    .src(["app/fonts/**/*.{woff,woff2}", "app/images/**"], {
+    .src(["app/fonts/**/*.{woff,woff2}", "app/images/**", "app/js/*.json"], {
       base: "app"
     })
     .pipe(gulp.dest("build/"));
@@ -97,4 +99,5 @@ function putOnProduction() {
 exports.start = start;
 exports.clean = clean;
 exports.build = build;
+exports.scripts = scripts;
 exports.putOnProduction = putOnProduction;
