@@ -5,7 +5,7 @@ const burgerBars = document.querySelectorAll(".bar");
 const menu = document.querySelector(".navbar__menu");
 const menuItems = document.querySelectorAll(".menu__link");
 
-const angleBodyRotate = "rotate(-25deg)";
+let angleBodyRotate = "rotate(-25deg)";
 const ESC_KEY = 27;
 const ENTER_KEY = 13;
 
@@ -97,3 +97,7 @@ orbitsCircles.forEach(function(e) {
 });
 
 particlesJS.load("particles-js", "js/particles.json");
+
+menuItems[1].addEventListener("click", function() {
+  bodyWrapper.style.transform = "rotate(-120deg)";
+});
