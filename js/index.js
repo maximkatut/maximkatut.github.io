@@ -1,13 +1,45 @@
-const orbitsCircles = document.querySelectorAll(".inner");
+const index = document.querySelectorAll(".index");
+const projects = document.querySelectorAll(".projects");
+const about = document.querySelectorAll(".about");
+const planets = document.querySelectorAll(".inner");
 const bodyWrapper = document.querySelector(".body-wrapper");
 const burger = document.querySelector(".navbar__burger");
 const burgerBars = document.querySelectorAll(".bar");
 const menu = document.querySelector(".navbar__menu");
 const menuItems = document.querySelectorAll(".menu__link");
+const info = document.querySelector(".footer__info");
+const load = document.querySelector(".load-wrapper");
+const loadCircle = document.querySelector(".lds-default");
 
-const angleBodyRotate = "rotate(-25deg)";
+let angleBodyRotate = "rotate(-25deg)";
 const ESC_KEY = 27;
 const ENTER_KEY = 13;
+const planetsStack = [
+  {
+    background: "no-repeat url('../images/html.svg')",
+    width: "40px",
+    height: "40px",
+    top: "50px"
+  },
+  {
+    background: "no-repeat url('../images/css.svg')",
+    width: "40px",
+    height: "40px",
+    top: "100px"
+  },
+  {
+    background: "no-repeat url('../images/js.svg')",
+    width: "40px",
+    height: "40px",
+    top: "180px"
+  },
+  {
+    background: "no-repeat url('../images/react.svg')",
+    width: "70px",
+    height: "70px",
+    top: "274px"
+  }
+];
 
 function debounce(func, wait, immediate) {
   var timeout;
@@ -71,7 +103,7 @@ function toggleMenu() {
     setTimeout(() => {
       menu.style.display = "none";
       menuItems.forEach(e => {
-        e.style.transform = "translateY(-600px)";
+        e.style.transform = "translateY(-2000px)";
       });
     }, 500);
   } else {
@@ -84,16 +116,41 @@ function toggleMenu() {
   }
 }
 
-orbitsCircles.forEach(e => {
-  e.addEventListener("mouseover", function(e) {
-    e.target.classList.add("inner__opacity");
-  });
-});
-
-orbitsCircles.forEach(function(e) {
-  e.addEventListener("mouseout", function(e) {
-    e.target.classList.remove("inner__opacity");
+planets.forEach((e, i) => {
+  e.addEventListener("click", e => {
+    e.target.style.background = "none";
+    e.target.style.boxShadow = "none";
+    e.target.style.borderRadius = "0px";
+    e.target.style.top = planetsStack[i].top;
+    e.target.style.width = planetsStack[i].width;
+    e.target.style.height = planetsStack[i].height;
+    e.target.style.background = planetsStack[i].background;
   });
 });
 
 particlesJS.load("particles-js", "js/particles.json");
+
+function goToPage(page) {
+  bodyWrapper.style.transform = "rotate(0deg)";
+  setTimeout(() => {
+    load.style.width = "100%";
+    loadCircle.style.display = "block";
+  }, 500);
+  setTimeout(() => {
+    window.location.href = page;
+  }, 1200);
+}
+
+if (info) {
+  info.addEventListener("mouseover", function() {
+    this.classList.remove("animated");
+  });
+}
+
+function pageLoader() {
+  setTimeout(() => {
+    loadCircle.style.display = "none";
+    load.style.width = "0%";
+  }, 500);
+}
+pageLoader();
