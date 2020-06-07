@@ -1,0 +1,15 @@
+.greeting {
+  padding-left: 100px;
+  padding-top: 50px;
+  font-size: $font-size-xl;
+  font-weight: $font-bold;
+  line-height: 200px;
+
+  .greeting__name {
+    padding-left: 100px;
+  }
+
+  span {
+    color: $text-color-red;
+  }
+}
