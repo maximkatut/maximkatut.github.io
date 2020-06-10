@@ -1,14 +1,15 @@
 // color
 $background-color-light: #c4c4c4;
-$background-color-dark: #333333;
+$background-color-dark: #222;
 $text-color-black: #000000;
 $text-color-white: #ffffff;
 $text-color-red: #c72f2f;
-$link-color: #222222;
-$button-color: #444444;
+$button-color: #555;
 
 $red: #c72f2f;
-$black: #222222;
+$red-opacity-low: rgba(199, 47, 47, 0.4);
+$black: #222;
+$white: #fff;
 
 // font weight
 $font-light: 300;
@@ -19,5 +20,6 @@ $font-bold: 700;
 // font-size
 $font-size-small: 24px;
 $font-size-medium: 36px;
-$font-size-xl: 180px;
+$font-size-l: 100px;
+$font-size-xl: 140px;
 $font-size-xxxl: 600px;

@@ -1,70 +1,45 @@
 .aside {
-  display: flex;
-  flex-direction: column;
 
-  .aside__share {
-    flex: 1;
-    position: relative;
+  .aside__share-link {
+    position: fixed;
+    top: 310px;
+    left: 80px;
+    color: $text-color-white;
+    font-weight: $font-medium;
+    text-decoration: none;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
 
-    .aside__share-link {
+    &:before {
+      content: '';
       position: absolute;
-      left: 40px;
-      top: 60%;
-      color: $text-color-white;
-      font-weight: $font-medium;
-      text-decoration: none;
-      transform: rotate(-90deg);
-      transform-origin: 0 0;
-
-      &:before {
-        content: '';
-        position: absolute;
-        width: 28px;
-        height: 28px;
-        left: 65px;
-        background-image: url("../assets/images/heart.svg");
-        background-repeat: no-repeat;
-        transform: rotate(90deg);
-      }
-
-      &:after {
-        content: "";
-        position: absolute;
-        top: 26px;
-        left: 0;
-        width: 0px;
-        height: 1px;
-        border-bottom: 2px solid $black;
-        transition: width 0.4s, border-color 0.6s;
-      }
-
-      &:hover {
-        &:before {
-          animation: heartBit 2s infinite; 
-        }
-        &:after {
-          border-color: red;
-          width: 57px;
-        }
-
-      }
+      width: 28px;
+      height: 28px;
+      left: 65px;
+      background-image: url("../assets/images/heart.svg");
+      background-repeat: no-repeat;
+      transform: rotate(90deg);
     }
-  }
 
-  .aside__job-title {
-    flex: 1;
-    position: relative;
-
-    p {
+    &:after {
+      content: "";
       position: absolute;
-      left: 40px;
-      top: 80%;
-      width: 200px;
-      color: $text-color-white;
-      font-weight: $font-light;
-      text-decoration: none;
-      transform: rotate(-90deg);
-      transform-origin: 0 0;
+      top: 26px;
+      left: 0;
+      width: 0px;
+      height: 1px;
+      border-bottom: 2px solid $white;
+      transition: width 0.4s, border-color 0.6s;
+    }
+
+    &:hover {
+      &:before {
+        animation: heartBit 2s infinite; 
+      }
+      &:after {
+        border-color: red;
+        width: 57px;
+      }
     }
   }
 }

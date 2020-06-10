@@ -1,11 +1,11 @@
 @import "utils/normalize";
 @import "variables";
 @import "background";
-@import "grid";
 @import "header";
 @import "aside";
 @import "main-greeting";
 @import "buttons";
+@import "next";
 
 * {
   // outline: 1px solid red;
@@ -14,9 +14,19 @@
 }
 
 body {
-  position: relative;
-  font-family: 'Rajdhani', sans-serif;
+  min-width: 420px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  font-family: "Rajdhani", sans-serif;
   font-size: $font-size-small;
   color: $text-color-white;
-  background-color: $background-color-light;
+  background-color: $background-color-dark;
+}
+
+.body-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 30px 2px $red-opacity-low;
 }
