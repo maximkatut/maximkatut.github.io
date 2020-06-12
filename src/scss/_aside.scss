@@ -1,5 +1,4 @@
 .aside {
-
   .aside__share-link {
     position: fixed;
     top: 310px;
@@ -11,7 +10,7 @@
     transform-origin: 0 0;
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       width: 28px;
       height: 28px;
@@ -34,7 +33,7 @@
 
     &:hover {
       &:before {
-        animation: heartBit 2s infinite; 
+        animation: heartBit 2s infinite;
       }
       &:after {
         border-color: red;
