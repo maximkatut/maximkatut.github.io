@@ -53,4 +53,11 @@ export default class Line {
     const newElement = this._createElement();
     this._container.appendChild(newElement);
   }
+
+  rerender() {
+    let oldElement = this._element;
+    this._element = this._createElement();
+    oldElement.parentNode.replaceChild(this._element, oldElement);
+    oldElement = null;
+  }
 }
