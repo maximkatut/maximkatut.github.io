@@ -1,11 +1,15 @@
 @import "utils/normalize";
+@import "utils/hide";
 @import "variables";
 @import "background";
 @import "header";
 @import "aside";
 @import "main-greeting";
 @import "buttons";
-@import "next";
+@import "about";
+@import "skills";
+@import "projects";
+@import "footer";
 
 * {
   // outline: 1px solid red;
@@ -19,9 +23,9 @@ body {
   margin: 0 auto;
   padding: 0 40px;
   font-family: "Rajdhani", sans-serif;
-  font-size: $font-size-small;
-  color: $text-color-white;
-  background-color: $background-color-dark;
+  font-size: $font-size-s;
+  color: $white;
+  background-color: $bg-dark;
 }
 
 .body-wrapper {
@@ -29,4 +33,8 @@ body {
   width: 100%;
   overflow: hidden;
   box-shadow: 0 0 30px 2px $red-opacity-low;
+}
+
+main {
+  padding: 0 50px;
 }
