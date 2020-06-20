@@ -1,7 +1,7 @@
-import {getRandomNumber, getHypotenuse} from '../utils/random';
+import {getHypotenuse, getRandomNumber} from '../utils/random';
 
-const MIN_ANGLE = 35;
-const MAX_ANGLE = 85;
+const MIN_ANGLE = 45;
+const MAX_ANGLE = 155;
 
 export default class Line {
   constructor() {

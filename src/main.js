@@ -1,7 +1,8 @@
 import './scss/style.scss';
+
 import Line from './components/line';
 
-const LINE_COUNT = 5;
+const LINE_COUNT = 20;
 
 const container = document.querySelector(`.background-lines`);
 
