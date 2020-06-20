@@ -41,10 +41,7 @@ export default class Line {
 
   _createElement() {
     this._element = document.createElement(`DIV`);
-    this._element.classList.add(`line`);
-    this._element.style.width = `${this._lineLength}px`;
-    this._element.style.transform = `rotate(${this._getAngle()}deg)`;
-    this._element.style.left = `${getRandomNumber(0, this._width)}px`;
+    this.update();
     return this._element;
   }
 
@@ -54,10 +51,10 @@ export default class Line {
     this._container.appendChild(newElement);
   }
 
-  rerender() {
-    let oldElement = this._element;
-    this._element = this._createElement();
-    oldElement.parentNode.replaceChild(this._element, oldElement);
-    oldElement = null;
+  update() {
+    this._element.classList.add(`line`);
+    this._element.style.width = `${this._lineLength}px`;
+    this._element.style.transform = `rotate(${this._getAngle()}deg)`;
+    this._element.style.left = `${getRandomNumber(0, this._width)}px`;
   }
 }

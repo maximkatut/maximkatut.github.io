@@ -21,7 +21,7 @@ const initLines = () => {
 
   window.addEventListener(`resize`, () => {
     renderedLines.forEach((line) => {
-      line.rerender();
+      line.update();
     });
   });
 };
