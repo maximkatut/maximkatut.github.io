@@ -1,3 +1,11 @@
+.light-mode {
+  .aside {
+    .aside__share-link {
+      color: $black;
+    }
+  }
+}
+
 .aside {
   .aside__share-link {
     position: fixed;
@@ -47,7 +55,7 @@
   .aside {
     .aside__share-link {
       left: none;
-      right: -100px;
+      left: 50px;
     }
   }
 }

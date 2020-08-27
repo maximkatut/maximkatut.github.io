@@ -1,8 +1,19 @@
+.light-mode {
+  .header__logo-link,
+  .social__link {
+    color: $black;
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 40px 0;
+}
+
+.header__logo {
+  position: relative;
 }
 
 .header__logo-link {

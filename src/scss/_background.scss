@@ -1,3 +1,9 @@
+.light-mode {
+  .background-text {
+    color: $black;
+  }
+}
+
 .background-lines {
   position: absolute;
   z-index: -2;
@@ -27,41 +33,5 @@
     left: -600px;
     font-size: $font-size-xxxl - 240px;
     transform: rotate(65deg);
-  }
-}
-
-@keyframes vibration {
-  0% {
-    outline: 1px solid $white;
-  }
-  10% {
-    outline: 3px solid $white;
-  }
-  20% {
-    outline: 1px solid $white;
-  }
-  30% {
-    outline: 3px solid $white;
-  }
-  40% {
-    outline: 1px solid $white;
-  }
-  50% {
-    outline: 3px solid $white;
-  }
-  60% {
-    outline: 1px solid $white;
-  }
-  70% {
-    outline: 3px solid $white;
-  }
-  80% {
-    outline: 1px solid $white;
-  }
-  90% {
-    outline: 3px solid $white;
-  }
-  100% {
-    outline: 1px solid $white;
   }
 }

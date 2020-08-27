@@ -1,3 +1,13 @@
+.light-mode {
+  .buttons-wrapper {
+    .button {
+      color: $black;
+      background-color: rgba(0, 0, 0, 0);
+      outline: 1px solid $black;
+    }
+  }
+}
+
 .buttons-wrapper {
   padding: 30px;
   text-align: center;
