@@ -1,0 +1,26 @@
+.projects {
+  @include section;
+
+  &__description {
+    .projects__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      list-style-type: none;
+
+      .projects__item {
+        margin-right: 5px;
+      }
+    }
+
+    .projects__more {
+      margin-top: 30px;
+      text-align: center;
+
+      button {
+        @include button;
+        width: 270px;
+      }
+    }
+  }
+}
