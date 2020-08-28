@@ -3,7 +3,16 @@
     .button {
       color: $black;
       background-color: rgba(0, 0, 0, 0);
-      outline: 1px solid $black;
+      border: 1px solid $black;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $red;
+      }
+
+      &:active {
+        border: 1px solid $white;
+      }
     }
   }
 }
