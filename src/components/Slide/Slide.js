@@ -6,7 +6,7 @@ const SlideBlock = styled.div`
   cursor: pointer;
   border-radius: 5px;
   background-image: url("${(props) => props.img}");
-  bacground-repeat: none;
+  background-repeat: none;
   background-size: cover;
   background-position: top;
   height: 300px;

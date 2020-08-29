@@ -9,10 +9,10 @@ const About = () => {
         <span role="img" aria-label="hi emoji">
           🙋‍♂️
         </span>{" "}
-        My name is Max Baravy. I'm from Belarus 🇧🇾 Currently living in the
-        United States 🇺🇸. I am front end developer with a strong passion of
-        ReactJS framework. Each day I learn something new and create web
-        products using best practices and modern techhologies.
+        My name is Max. I'm from Belarus 🇧🇾 Currently living in the United
+        States 🇺🇸. I am front end developer with a strong passion of ReactJS
+        framework. Each day I learn something new and create web products using
+        best practices and modern techhologies.
         <div className="about__stack">
           <span role="img" aria-label="hi emoji">
             🛠

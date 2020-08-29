@@ -3,9 +3,9 @@ import Slider from "react-slick";
 
 import Slide from "../Slide/Slide";
 
-import polind from "../../assets/images/projects/polind.png";
-import cinema from "../../assets/images/projects/cinema.png";
-import sixCities from "../../assets/images/projects/six-cities.png";
+import polind from "../../assets/images/projects/polind.jpg";
+import cinema from "../../assets/images/projects/cinema.jpg";
+import sixCities from "../../assets/images/projects/six-cities.jpg";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
