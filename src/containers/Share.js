@@ -1,17 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
+import { Helmet } from "react-helmet";
 
 const ShareBlock = styled.div`
   display: flex;
   justify-content: space-between;
   height: 40vh;
   padding: 0 50px;
-  margin: 40px 0;
+  margin: 60px 0 180px 0;
 
   @media (max-width: 900px) {
     flex-wrap: wrap;
     height: 100%;
+    margin-bottom: 60px;
   }
 `;
 
@@ -25,7 +27,7 @@ const ShareItem = styled.div`
   cursor: pointer;
 
   &:hover {
-    outline: 1px solid red;
+    outline: 1px solid #c72f2f;
   }
 
   @media (max-width: 900px) {
@@ -45,41 +47,48 @@ const clickLink = (url) => {
 
 const Share = ({ lightMode }) => {
   return (
-    <ShareBlock>
-      <ShareItem
-        lightMode={lightMode}
-        onClick={() => {
-          clickLink(
-            "https://www.facebook.com/sharer/sharer.php?u=https://maxbaravy.com&t=MaxBaravy.com"
-          );
-        }}
-        title="Share on Facebook"
-      >
-        Facebook
-      </ShareItem>
-      <ShareItem
-        lightMode={lightMode}
-        onClick={() => {
-          clickLink(
-            "http://twitter.com/share?text=Max Baravy - Web Developer&url=https://maxbaravy.com/&hashtags=webdeveloper,dev,react,frontend"
-          );
-        }}
-        title="Share on Twitter"
-      >
-        Twitter
-      </ShareItem>
-      <ShareItem
-        lightMode={lightMode}
-        onClick={() => {
-          clickLink(
-            "https://www.linkedin.com/shareArticle?mini=true&url=https://maxbaravy.com&title=Max Baravy - Web Developer&summary=Max Baravy - Web Developer&source=maxbaravy.com"
-          );
-        }}
-        title="Share on LinkedIn"
-      >
-        LinkedIn
-      </ShareItem>
-    </ShareBlock>
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="description" content="Max Baravy - react web developer" />
+        <title>Max Baravy - Share my website</title>
+      </Helmet>
+      <ShareBlock>
+        <ShareItem
+          lightMode={lightMode}
+          onClick={() => {
+            clickLink(
+              "https://www.facebook.com/sharer/sharer.php?u=https://maxbaravy.com&t=MaxBaravy.com"
+            );
+          }}
+          title="Share on Facebook"
+        >
+          Facebook
+        </ShareItem>
+        <ShareItem
+          lightMode={lightMode}
+          onClick={() => {
+            clickLink(
+              "http://twitter.com/share?text=Max Baravy - Web Developer&url=https://maxbaravy.com/&hashtags=webdeveloper,dev,react,frontend"
+            );
+          }}
+          title="Share on Twitter"
+        >
+          Twitter
+        </ShareItem>
+        <ShareItem
+          lightMode={lightMode}
+          onClick={() => {
+            clickLink(
+              "https://www.linkedin.com/shareArticle?mini=true&url=https://maxbaravy.com&title=Max Baravy - Web Developer&summary=Max Baravy - Web Developer&source=maxbaravy.com"
+            );
+          }}
+          title="Share on LinkedIn"
+        >
+          LinkedIn
+        </ShareItem>
+      </ShareBlock>
+    </>
   );
 };
 
