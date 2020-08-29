@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 
 const MIN_ANGLE = 45;
 const MAX_ANGLE = 155;
-const FIRST_LOAD = 500;
+const FIRST_LOAD = 1500;
 
 const LineStyled = styled.div`
   z-index: -2;

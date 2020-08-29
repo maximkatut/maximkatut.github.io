@@ -6,7 +6,7 @@ const SocialItem = ({ item }) => {
       <a
         href={item.url}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         className={`social__link link-${item.name.toLowerCase()}`}
       >
         {item.name}

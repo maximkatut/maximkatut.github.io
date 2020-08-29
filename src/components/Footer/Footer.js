@@ -1,14 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer>
-      <h2>Footer</h2>
+      <h2 className="visually-hidden">Footer</h2>
       <div className="header__logo">
-        <a href="#link" className="header__logo-link">
+        <Link to="/" className="header__logo-link">
           M<span>a</span>x Baravy
-        </a>
+        </Link>
         <p className="header__job-title">Front-End Developer</p>
+        <p>© {String(new Date().getFullYear())}</p>
       </div>
     </footer>
   );

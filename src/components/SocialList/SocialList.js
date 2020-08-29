@@ -4,7 +4,7 @@ import SocialItem from "../SocialItem/SocialItem";
 
 const SocialNames = [
   { name: "GitHUB", url: "https://github.com/maximkatut" },
-  { name: "Email", url: "mailto:maxbaravy@gmail.com" },
+  { name: "Email", url: "mailto:maxbaravy@gmail.com?subject=Hello!" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/maksimbaravy/" },
   { name: "Facebook", url: "https://www.facebook.com/maxbaravy" },
 ];
