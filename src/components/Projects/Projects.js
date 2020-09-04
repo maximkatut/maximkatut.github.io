@@ -14,6 +14,7 @@ const Projects = (props) => {
             className="button"
             onClick={() => {
               props.history.push("/projects");
+              window.scrollTo(0, 0);
             }}
           >
             Show more

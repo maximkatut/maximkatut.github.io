@@ -8,6 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { projects } from "../../data/projects";
 
+const SLIDES_ON_MAIN = 3;
+
 export default class extends Component {
   render() {
     const settings = {
@@ -20,16 +22,19 @@ export default class extends Component {
     };
     return (
       <Slider {...settings}>
-        {projects.map(({ title, img, description }) => {
-          return (
-            <Slide
-              key={title}
-              title={title}
-              img={img}
-              description={description}
-            />
-          );
-        })}
+        {projects
+          .slice(0, SLIDES_ON_MAIN)
+          .map(({ title, img, description, url }) => {
+            return (
+              <Slide
+                key={title}
+                title={title}
+                img={img}
+                description={description}
+                url={url}
+              />
+            );
+          })}
       </Slider>
     );
   }

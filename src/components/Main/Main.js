@@ -12,10 +12,10 @@ const Main = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="description" content="Max Baravy - react web developer" />
-        <title>Max Baravy</title>
+        <title>Max Baravy - Front End Developer</title>
       </Helmet>
       <main className="page-main">
-        <h1 className="visually-hidden">Max Baravy front end developer</h1>
+        <h1 className="visually-hidden">Max Baravy - Front End Developer</h1>
         <Aside />
         <Greeting />
         <Projects />
