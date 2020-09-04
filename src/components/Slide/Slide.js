@@ -33,9 +33,15 @@ const SlideBlock = styled.div`
   }
 `;
 
-const Slide = ({ img, title, description, lightMode }) => {
+const Slide = ({ img, title, description, url, lightMode }) => {
   return (
-    <SlideBlock img={img} lightMode={lightMode}>
+    <SlideBlock
+      img={img}
+      lightMode={lightMode}
+      onClick={() => {
+        window.open(url, "_top");
+      }}
+    >
       <h1>{title}</h1>
       <p>{description}</p>
     </SlideBlock>

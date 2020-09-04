@@ -3,8 +3,11 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import Project from "../components/Project/Project";
+
 const ProjectsBlock = styled.div`
   text-align: center;
+  padding: 0 50px;
 
   a {
     color: ${(props) => (props.lightMode ? "#222" : "#eee")};
@@ -20,6 +23,7 @@ export class Projects extends Component {
           <Link to="/" style={{ textDecoration: "none" }}>
             {"<"} Go back
           </Link>
+          <Project />
         </ProjectsBlock>
       </section>
     );

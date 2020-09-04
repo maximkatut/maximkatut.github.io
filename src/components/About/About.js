@@ -30,6 +30,7 @@ const About = () => {
             <li className="about__item">Code bundlers: Gulp, Webpack</li>
             <li className="about__item">UX/UI: Adobe Photoshop, Figma</li>
             <li className="about__item">Version-control system: Git</li>
+            <li className="about__item">Package manager: npm</li>
           </ul>
         </div>
       </div>

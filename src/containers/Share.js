@@ -97,7 +97,6 @@ const clickLink = (url) => {
 };
 
 const Share = ({ lightMode }) => {
-  console.log(linkedInImg);
   return (
     <>
       <Helmet>

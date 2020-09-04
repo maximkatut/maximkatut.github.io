@@ -3,32 +3,10 @@ import Slider from "react-slick";
 
 import Slide from "../Slide/Slide";
 
-import polind from "../../assets/images/projects/polind.jpg";
-import cinema from "../../assets/images/projects/cinema.jpg";
-import sixCities from "../../assets/images/projects/six-cities.jpg";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Projects = [
-  {
-    title: "six-cities",
-    img: sixCities,
-    description:
-      "SPA on React with Redux, React Router, leaflet - open source map library",
-  },
-  {
-    title: "cinemaddict",
-    img: cinema,
-    description: "Single page application on Vanila JS",
-  },
-  {
-    title: "polind",
-    img: polind,
-    description: "Simple landing page. CSS/HTML",
-  },
-  { title: "sedona", img: polind, description: "blabla" },
-];
+import { projects } from "../../data/projects";
 
 export default class extends Component {
   render() {
@@ -42,7 +20,7 @@ export default class extends Component {
     };
     return (
       <Slider {...settings}>
-        {Projects.map(({ title, img, description }) => {
+        {projects.map(({ title, img, description }) => {
           return (
             <Slide
               key={title}
