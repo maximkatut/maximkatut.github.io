@@ -1,9 +1,9 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
-import history from "../../history";
 import Slider from "../Slider/Slider";
 
-const Projects = () => {
+const Projects = (props) => {
   return (
     <section className="projects">
       <h2 className="projects__title">Some projects</h2>
@@ -13,7 +13,7 @@ const Projects = () => {
           <button
             className="button"
             onClick={() => {
-              history.push("/projects");
+              props.history.push("/projects");
             }}
           >
             Show more
@@ -24,4 +24,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default withRouter(Projects);

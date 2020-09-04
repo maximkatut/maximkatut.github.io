@@ -1,7 +1,5 @@
 import React from "react";
-import { Router, Switch, Route, Redirect } from "react-router-dom";
-
-import history from "../history";
+import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import "../scss/style.scss";
 
@@ -16,7 +14,7 @@ import NotFound from "./NotFound";
 
 const App = () => {
   return (
-    <Router history={history}>
+    <HashRouter basename="/">
       <div className="body-wrapper">
         <Lines />
         <BodyText />
@@ -30,7 +28,7 @@ const App = () => {
         </Switch>
         <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 };
 

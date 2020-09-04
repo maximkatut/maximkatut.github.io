@@ -1,8 +1,7 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
-import history from "../../history";
-
-const Greeting = () => {
+const Greeting = (props) => {
   return (
     <section className="greeting">
       <h2 className="visually-hidden">Hello there</h2>
@@ -16,7 +15,7 @@ const Greeting = () => {
         <button
           className="button"
           onClick={() => {
-            history.push("/projects");
+            props.history.push("/projects");
           }}
         >
           Portfolio
@@ -34,4 +33,4 @@ const Greeting = () => {
   );
 };
 
-export default Greeting;
+export default withRouter(Greeting);
