@@ -30,6 +30,27 @@
   }
 }
 
+.button {
+  @include button;
+}
+
+.light-mode {
+  .button {
+    color: $black;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid $black;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $red;
+    }
+
+    &:active {
+      border: 1px solid $white;
+    }
+  }
+}
+
 @media (max-width: $small) {
   .buttons-wrapper {
     display: flex;

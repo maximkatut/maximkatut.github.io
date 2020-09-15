@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
+import { withRouter } from "react-router-dom";
 
 import Project from "../components/Project/Project";
 
@@ -27,9 +27,15 @@ export class Projects extends Component {
         </Helmet>
         <section>
           <ProjectsBlock lightMode={lightMode}>
-            <Link to="/" style={{ textDecoration: "none" }}>
-              {"<"} Go back
-            </Link>
+            <button
+              className="button"
+              onClick={() => {
+                this.props.history.goBack();
+                window.scrollTo(0, 0);
+              }}
+            >
+              Go back
+            </button>
             <Project />
           </ProjectsBlock>
         </section>
@@ -42,4 +48,4 @@ const mapStateToProps = (state) => ({
   lightMode: state.lightMode,
 });
 
-export default connect(mapStateToProps)(Projects);
+export default withRouter(connect(mapStateToProps)(Projects));
