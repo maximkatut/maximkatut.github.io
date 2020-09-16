@@ -11,7 +11,31 @@ import { projects } from "../../data/projects";
 const SLIDES_ON_MAIN = 3;
 
 export default class extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      arrows: true,
+    };
+
+    this.getWidth = this.getWidth.bind(this);
+  }
+
+  getWidth() {
+    this.setState({
+      arrows: document.body.clientWidth > 700,
+    });
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.getWidth);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.getWidth);
+  }
   render() {
+    const { arrows } = this.state;
     const settings = {
       dots: true,
       dotsClass: "dots",
@@ -19,6 +43,7 @@ export default class extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      arrows,
     };
     return (
       <Slider {...settings}>
