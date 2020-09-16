@@ -48,12 +48,12 @@ class LightModeToggle extends Component {
 
   componentDidMount() {
     const { toggleLightMode } = this.props;
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (e) => {
+    if (window.matchMedia) {
+      window.matchMedia("(prefers-color-scheme: dark)").addListener((e) => {
         const lightMode = e.matches ? false : true;
         toggleLightMode(lightMode);
       });
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -65,12 +65,6 @@ class LightModeToggle extends Component {
       }
       localStorage.setItem("LIGHT_MODE", this.props.lightMode);
     }
-  }
-
-  componentWillUnmount() {
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .removeEventListener("change");
   }
 
   render() {
@@ -99,7 +93,7 @@ class LightModeToggle extends Component {
           tabIndex="0"
           lightMode={lightMode}
           ref={(toggle) => (this.toggle = toggle)}
-        ></Toggle>
+        />
       </ToggleBox>
     );
   }
