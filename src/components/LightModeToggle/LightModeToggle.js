@@ -46,6 +46,16 @@ class LightModeToggle extends Component {
     }
   }
 
+  componentDidMount() {
+    const { toggleLightMode } = this.props;
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const lightMode = e.matches ? false : true;
+        toggleLightMode(lightMode);
+      });
+  }
+
   componentDidUpdate(prevProps) {
     if (prevProps.lightMode !== this.props.lightMode) {
       if (this.props.lightMode) {
@@ -55,6 +65,12 @@ class LightModeToggle extends Component {
       }
       localStorage.setItem("LIGHT_MODE", this.props.lightMode);
     }
+  }
+
+  componentWillUnmount() {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .removeEventListener("change");
   }
 
   render() {
