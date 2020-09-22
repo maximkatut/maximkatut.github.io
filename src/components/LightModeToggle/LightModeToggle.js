@@ -12,7 +12,7 @@ const ToggleBox = styled.div`
   top: 10px;
   cursor: pointer;
   transition: all 0.1s ease-in;
-  width: 55px;
+  width: 57px;
   border-radius: 20px;
   background-color: ${(props) => (props.lightMode ? `#999` : `#555`)};
 
@@ -24,7 +24,7 @@ const ToggleBox = styled.div`
 const Toggle = styled.div`
   position: absolute;
   top: 3px;
-  left: ${(props) => (props.lightMode ? `3px` : `33px`)};
+  left: ${(props) => (props.lightMode ? `3px` : `35px`)};
   width: 25px;
   height: 25px;
   background-color: #fff;
