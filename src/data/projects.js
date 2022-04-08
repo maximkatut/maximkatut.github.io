@@ -14,7 +14,7 @@ export const projects = [
   },
   {
     title: "cinemaddict",
-    url: "https://thirsty-curie-0ebdd9.netlify.app/",
+    url: "https://master--thirsty-curie-0ebdd9.netlify.app/",
     img: cinema,
     description: "Single page application on Vanila JS (ES6).",
   },
