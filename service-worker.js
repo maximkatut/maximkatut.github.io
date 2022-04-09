@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/maximkatut.github.io/precache-manifest.11516e9eeac0029b84f2053001d7bc80.js"
+  "/maximkatut.github.io/precache-manifest.9a8bdf2a5173775947e259bffcd52fb0.js"
 );
 
 self.addEventListener('message', (event) => {

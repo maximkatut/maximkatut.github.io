@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6779e3e645fe777262177f5d61d23377",
+    "revision": "b7ad2596959c3aa25ae8c125cc41e37e",
     "url": "/maximkatut.github.io/index.html"
   },
   {
