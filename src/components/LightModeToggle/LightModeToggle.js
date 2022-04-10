@@ -17,7 +17,8 @@ const ToggleBox = styled.div`
   background-color: ${(props) => (props.lightMode ? `#999` : `#555`)};
 
   @media (max-width: 900px) {
-    display: none;
+    left: 40px;
+    transform: scale(1.3);
   }
 `;
 
