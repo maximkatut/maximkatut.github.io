@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/maximkatut.github.io/static/css/main.b346a6b2.chunk.css",
-    "main.js": "/maximkatut.github.io/static/js/main.767962bd.chunk.js",
-    "main.js.map": "/maximkatut.github.io/static/js/main.767962bd.chunk.js.map",
+    "main.css": "/maximkatut.github.io/static/css/main.52f106c7.chunk.css",
+    "main.js": "/maximkatut.github.io/static/js/main.7d67f35f.chunk.js",
+    "main.js.map": "/maximkatut.github.io/static/js/main.7d67f35f.chunk.js.map",
     "runtime-main.js": "/maximkatut.github.io/static/js/runtime-main.4b8ff8c9.js",
     "runtime-main.js.map": "/maximkatut.github.io/static/js/runtime-main.4b8ff8c9.js.map",
     "static/css/2.0635a70e.chunk.css": "/maximkatut.github.io/static/css/2.0635a70e.chunk.css",
     "static/js/2.ea96f063.chunk.js": "/maximkatut.github.io/static/js/2.ea96f063.chunk.js",
     "static/js/2.ea96f063.chunk.js.map": "/maximkatut.github.io/static/js/2.ea96f063.chunk.js.map",
     "index.html": "/maximkatut.github.io/index.html",
-    "precache-manifest.9a8bdf2a5173775947e259bffcd52fb0.js": "/maximkatut.github.io/precache-manifest.9a8bdf2a5173775947e259bffcd52fb0.js",
+    "precache-manifest.36548bdfd9afcbe171f1892200676e8f.js": "/maximkatut.github.io/precache-manifest.36548bdfd9afcbe171f1892200676e8f.js",
     "service-worker.js": "/maximkatut.github.io/service-worker.js",
     "static/css/2.0635a70e.chunk.css.map": "/maximkatut.github.io/static/css/2.0635a70e.chunk.css.map",
-    "static/css/main.b346a6b2.chunk.css.map": "/maximkatut.github.io/static/css/main.b346a6b2.chunk.css.map",
+    "static/css/main.52f106c7.chunk.css.map": "/maximkatut.github.io/static/css/main.52f106c7.chunk.css.map",
     "static/js/2.ea96f063.chunk.js.LICENSE.txt": "/maximkatut.github.io/static/js/2.ea96f063.chunk.js.LICENSE.txt",
     "static/media/cinema.jpg": "/maximkatut.github.io/static/media/cinema.83bcd4bd.jpg",
     "static/media/facebook-white.svg": "/maximkatut.github.io/static/media/facebook-white.a8193003.svg",
@@ -32,7 +32,7 @@
     "static/js/runtime-main.4b8ff8c9.js",
     "static/css/2.0635a70e.chunk.css",
     "static/js/2.ea96f063.chunk.js",
-    "static/css/main.b346a6b2.chunk.css",
-    "static/js/main.767962bd.chunk.js"
+    "static/css/main.52f106c7.chunk.css",
+    "static/js/main.7d67f35f.chunk.js"
   ]
 }

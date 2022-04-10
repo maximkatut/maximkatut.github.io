@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b7ad2596959c3aa25ae8c125cc41e37e",
+    "revision": "d140982dc4baf0eb90fe59b0061ea580",
     "url": "/maximkatut.github.io/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/maximkatut.github.io/static/css/2.0635a70e.chunk.css"
   },
   {
-    "revision": "5f95708ec2cd8f857627",
-    "url": "/maximkatut.github.io/static/css/main.b346a6b2.chunk.css"
+    "revision": "4308cbac9838027558b2",
+    "url": "/maximkatut.github.io/static/css/main.52f106c7.chunk.css"
   },
   {
     "revision": "10f3d4bdef8f2f84d980",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/maximkatut.github.io/static/js/2.ea96f063.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5f95708ec2cd8f857627",
-    "url": "/maximkatut.github.io/static/js/main.767962bd.chunk.js"
+    "revision": "4308cbac9838027558b2",
+    "url": "/maximkatut.github.io/static/js/main.7d67f35f.chunk.js"
   },
   {
     "revision": "69d5bfdaf144b01130ad",
